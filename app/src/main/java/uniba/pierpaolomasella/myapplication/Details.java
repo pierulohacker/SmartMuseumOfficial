@@ -24,83 +24,83 @@ public class Details {
         this.setDescrizione(descrizione);
 
     }
-    public String getOpera() {
+    private String getOpera() {
         return opera;
     }
 
-    public void setOpera(String opera) {
+    private void setOpera(String opera) {
         this.opera = opera;
     }
 
-    public String getAutore() {
+    private String getAutore() {
         return autore;
     }
 
-    public void setAutore(String autore) {
+    private void setAutore(String autore) {
         this.autore = autore;
     }
 
-    public String getPeriodo() {
+    private String getPeriodo() {
         return periodo;
     }
 
-    public void setPeriodo(String periodo) {
+    private void setPeriodo(String periodo) {
         this.periodo = periodo;
     }
 
-    public String getCultura() {
+    private String getCultura() {
         return cultura;
     }
 
-    public void setCultura(String cultura) {
+    private void setCultura(String cultura) {
         this.cultura = cultura;
     }
 
-    public String getDimensione() {
+    private String getDimensione() {
         return dimensione;
     }
 
-    public void setDimensione(String dimensione) {
+    private void setDimensione(String dimensione) {
         this.dimensione = dimensione;
     }
 
-    public String getTecnica() {
+    private String getTecnica() {
         return tecnica;
     }
 
-    public void setTecnica(String tecnica) {
+    private void setTecnica(String tecnica) {
         this.tecnica = tecnica;
     }
 
-    public String getValore() {
+    private String getValore() {
         return valore;
     }
 
-    public void setValore(String valore) {
+    private void setValore(String valore) {
         this.valore = valore;
     }
 
-    public String getPeso() {
+    private String getPeso() {
         return peso;
     }
 
-    public void setPeso(String peso) {
+    private void setPeso(String peso) {
         this.peso = peso;
     }
 
-    public String getTrovato_da() {
+    private String getTrovato_da() {
         return trovato_da;
     }
 
-    public void setTrovato_da(String trovato_da) {
+    private void setTrovato_da(String trovato_da) {
         this.trovato_da = trovato_da;
     }
 
-    public String getDescrizione() {
+    private String getDescrizione() {
         return descrizione;
     }
 
-    public void setDescrizione(String descrizione) {
+    private void setDescrizione(String descrizione) {
         this.descrizione = descrizione;
     }
 }
