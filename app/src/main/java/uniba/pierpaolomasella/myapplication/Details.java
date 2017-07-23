@@ -7,7 +7,17 @@ package uniba.pierpaolomasella.myapplication;
 
 public class Details {
 
-    private String opera, autore, periodo, tecnica, cultura, dimensione, valore, peso, trovato_da, descrizione;
+    String opera;
+    String autore;
+    String periodo;
+    String tecnica;
+    String cultura;
+    String dimensione;
+    String valore;
+    String peso;
+    String trovato_da;
+    String descrizione;
+
 
 
     public Details(String opera, String autore, String periodo, String tecnica,String cultura,String dimensione,String valore, String peso, String trovato_da,String descrizione)
