@@ -24,81 +24,81 @@ public class Details {
         this.setDescrizione(descrizione);
 
     }
-    private String getOpera() {
-        return opera;
-    }
+//    private String getOpera() {
+//        return opera;
+//    }
 
     private void setOpera(String opera) {
         this.opera = opera;
     }
 
-    private String getAutore() {
-        return autore;
-    }
+//    private String getAutore() {
+//        return autore;
+//    }
 
     private void setAutore(String autore) {
         this.autore = autore;
     }
 
-    private String getPeriodo() {
-        return periodo;
-    }
+//    private String getPeriodo() {
+//        return periodo;
+//    }
 
     private void setPeriodo(String periodo) {
         this.periodo = periodo;
     }
 
-    private String getCultura() {
-        return cultura;
-    }
+//    private String getCultura() {
+//        return cultura;
+//    }
 
     private void setCultura(String cultura) {
         this.cultura = cultura;
     }
 
-    private String getDimensione() {
-        return dimensione;
-    }
+//    private String getDimensione() {
+//        return dimensione;
+//    }
 
     private void setDimensione(String dimensione) {
         this.dimensione = dimensione;
     }
 
-    private String getTecnica() {
-        return tecnica;
-    }
+//    private String getTecnica() {
+//        return tecnica;
+//    }
 
     private void setTecnica(String tecnica) {
         this.tecnica = tecnica;
     }
 
-    private String getValore() {
-        return valore;
-    }
+//    private String getValore() {
+//        return valore;
+//    }
 
     private void setValore(String valore) {
         this.valore = valore;
     }
 
-    private String getPeso() {
-        return peso;
-    }
+//    private String getPeso() {
+//        return peso;
+//    }
 
     private void setPeso(String peso) {
         this.peso = peso;
     }
 
-    private String getTrovato_da() {
-        return trovato_da;
-    }
+//    private String getTrovato_da() {
+//        return trovato_da;
+//    }
 
     private void setTrovato_da(String trovato_da) {
         this.trovato_da = trovato_da;
     }
 
-    private String getDescrizione() {
-        return descrizione;
-    }
+//    private String getDescrizione() {
+//        return descrizione;
+//    }
 
     private void setDescrizione(String descrizione) {
         this.descrizione = descrizione;
