@@ -1,10 +1,17 @@
 package uniba.pierpaolomasella.myapplication;
 
-
+import android.speech.tts.TextToSpeech;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
+import android.content.Intent;
+import android.provider.Settings;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.method.BaseMovementMethod;
 import android.text.method.ScrollingMovementMethod;
 
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -12,7 +19,11 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.util.Locale;
+
 public class DisplayListView extends AppCompatActivity {
+    TextToSpeech t1;
+    Button parlami;
     boolean trovato = false;
     String json_string;
     JSONObject jsonObject;
@@ -36,6 +47,19 @@ public class DisplayListView extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
        setContentView(R.layout.struttura_lista);
+        parlami = (Button)findViewById(R.id.button);
+
+        t1=new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+            @Override
+            public void onInit(int status) {
+                if(status != TextToSpeech.ERROR) {
+                    t1.setLanguage(Locale.ITALIAN);
+                }
+            }
+        });
+
+
+
 
         ViewTitolo = (TextView) findViewById(R.id.textViewNomeOpera);
         ViewAutore = (TextView) findViewById(R.id.textViewAutore);
@@ -48,6 +72,7 @@ public class DisplayListView extends AppCompatActivity {
         ViewPeso = (TextView) findViewById(R.id.textViewPeso);
         ViewDescrizione = (TextView) findViewById(R.id.textViewDescrizione);
         ViewDescrizione.setMovementMethod(new ScrollingMovementMethod());
+       // ViewDescrizione.setMovementMethod(new BaseMovementMethod());
 //        Intent i = getIntent();
 //         int id = i.getIntExtra("json_data", 0);
         //json_string = getIntent().getExtras().getString("json_data");
@@ -113,8 +138,50 @@ public class DisplayListView extends AppCompatActivity {
                 Toast.makeText(DisplayListView.this,"Nessuna opera corrispondente", Toast.LENGTH_LONG).show();
 
                 //break;
-
             }
+            /*DialogInterface.OnClickListener dialogClickListener = new DialogInterface.OnClickListener()
+            {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    switch (which) {
+                        case DialogInterface.BUTTON_POSITIVE:
+                            startActivityForResult(new Intent(Settings.ACTION_ACCESSIBILITY_SETTINGS), 0);
+                            break;
+                        case DialogInterface.BUTTON_NEGATIVE:
+                            boolean flag = true;
+                            break;
+                    }
+                }
+
+                AlertDialog.Builder builder = new AlertDialog.Builder(DisplayListView.this);
+                builder.
+            builder.setMessage("Attivare Text To Speech?").setPositiveButton("Procedi",dialogClickListener).setNegativeButton("Già Attivo",dialogClickListener).show();
+
+            };*/
+
+            parlami.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    String toSpeak = ViewDescrizione.getText().toString();
+                   /* Toast.makeText(getApplicationContext(), toSpeak,Toast.LENGTH_SHORT).show();
+                    DialogInterface.OnClickListener dialogClickListener = new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                            switch (which) {
+                                case DialogInterface.BUTTON_POSITIVE:
+                                    startActivityForResult(new Intent(Settings.ACTION_ACCESSIBILITY_SETTINGS), 0);
+                                    break;
+                                case DialogInterface.BUTTON_NEGATIVE:
+                                    boolean flag = true;
+                                    break;
+                            }
+                        }
+                    };
+                    AlertDialog.Builder builder = new AlertDialog.Builder(DisplayListView.this);
+                    builder.setMessage("Si raccomanda l'utilizzo delle cuffie").setPositiveButton("Va bene", dialogClickListener);
+                    */t1.speak(toSpeak, TextToSpeech.QUEUE_FLUSH, null);
+                }
+            });
 
         } catch (JSONException e) {
             e.printStackTrace();
@@ -123,6 +190,14 @@ public class DisplayListView extends AppCompatActivity {
 
 
     }
+    public void onPause(){
+        if(t1 !=null){
+            t1.stop();
+            t1.shutdown();
+        }
+        super.onPause();
+    }
+
 
 
 }
