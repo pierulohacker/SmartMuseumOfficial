@@ -6,19 +6,19 @@ import android.os.Vibrator;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.TextView;
+
 import android.widget.Toast;
 import java.io.*;
 import com.google.zxing.Result;
 
-import org.json.JSONArray;
+
 
 import java.net.HttpURLConnection;
-import java.net.InetAddress;
+
 import java.net.MalformedURLException;
-import java.net.Socket;
+
 import java.net.URL;
-import java.net.UnknownHostException;
+
 
 import me.dm7.barcodescanner.zxing.ZXingScannerView;
 
