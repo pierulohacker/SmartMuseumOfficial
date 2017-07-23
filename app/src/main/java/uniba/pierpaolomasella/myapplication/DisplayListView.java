@@ -18,16 +18,16 @@ public class DisplayListView extends AppCompatActivity {
     JSONObject jsonObject;
     JSONArray jsonArray;
     int id;
-    private TextView ViewTitolo;
-    private TextView ViewAutore;
-    private TextView ViewPeriodo;
-    private TextView ViewCultura;
-    private TextView ViewTecnica;
-    private TextView ViewDimensione;
-    private TextView ViewValore;
-    private TextView ViewTrovatoDa;
-    private TextView ViewPeso;
-    private TextView ViewDescrizione;
+     TextView ViewTitolo;
+     TextView ViewAutore;
+     TextView ViewPeriodo;
+     TextView ViewCultura;
+     TextView ViewTecnica;
+     TextView ViewDimensione;
+     TextView ViewValore;
+     TextView ViewTrovatoDa;
+     TextView ViewPeso;
+     TextView ViewDescrizione;
 
 
     //DetailsAdapter detailsAdapter;
