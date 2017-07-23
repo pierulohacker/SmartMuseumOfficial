@@ -1,7 +1,6 @@
 package uniba.pierpaolomasella.myapplication;
 
 import android.content.Intent;
-import android.database.CursorJoiner;
 import android.os.AsyncTask;
 import android.os.Vibrator;
 import android.support.v7.app.AppCompatActivity;
